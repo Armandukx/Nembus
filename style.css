@@ -1,5 +1,7 @@
 body {
     background-image: url('images/banner.png');
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 
