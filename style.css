@@ -4,7 +4,22 @@ body {
     overflow-x: hidden;
 }
 
-
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .header-buttons {
+    display: flex;
+}
 .kaarten-1 {
     background: rgba(54, 54, 54, 0.5);
     border-radius: 16px;
@@ -139,20 +154,58 @@ body {
 }
 
 .topbar-eu {
-    background: rgba(54, 54, 54, 0.5);
-    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 20px 1px #000000;
-    backdrop-filter: blur(5.8px);
-    -webkit-backdrop-filter: blur(5.8px);
+    border-radius: 4px;
+    text-align-last: center;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px; /* Adjust font size for the text */
     font-family: "Montserrat", sans-serif;
-    text-align: center;
+    font-weight: bold;
     color: #ffffff;
     width: 1000px;
-    margin-left: auto; 
+    height: 30px;
+    margin-left: auto;
     margin-right: auto;
-    top: 250px;
+    top: 200px;
     left: 420px;
     position: absolute;
 }
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
