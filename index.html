@@ -3,60 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nembus | Rust Servers</title>
+    <meta content="Nembus | Rust Servers" property="og:title" />
+    <meta content="https://nembus.nl/" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/Armandukx/Nembus/main/images/banner.png" property="og:image" />
+    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+    <meta data-n-head="ssr" name="twitter:image" itemprop="image" content="https://raw.githubusercontent.com/Armandukx/Nembus/main/images/banner.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <section class="header">
-        <div class="header-div">
-            <h2 class="nembus">Nembus</h2>
-            <a href="">
-                <h2></h2>
-            </a>
+    <header class="header">
+        <div class="header-buttons">
+            <button class="cta" onclick="window.open('https://nembus.nl/')">
+                <span class="hover-underline-animation"> Home </span>
+              </button>
+            <button class="cta" onclick="window.open('https://nembus.nl/discord', '_blank')">
+                <span class="hover-underline-animation"> Discord </span>
+              </button>
+              <button class="cta" onclick="window.open('https://steamcommunity.com/groups/Nembus-Rust', '_blank')">
+                <span class="hover-underline-animation"> Steam Group </span>
+              </button>
         </div>
-    </section>
+    </header>
     <div class="everything">
-        <div class="topbar-eu">EU servers</div>
+        <div class="topbar-eu">EU Servers</div>
         <div class="center">
             <div class="cards">
                 <div class="kaarten-1">
                     <img src="images/background.jpeg" class="image" alt="">
-                    <h2 class="title" id="p1">server IP thing 1
-                        <button class="copy_button" onclick="copyToClipboard('#p1')">
-                            <i class="fa-regular fa-copy"></i>   
-                        </button>
-                    </h2>
-                    <h2 class="count"> 67/100</h2>
-                    <div class="progress-grey">
-                        <div class="progress"></div>
-                    </div>
-                </div>
-                <div class="kaarten-2">
-                    <img src="images/background.jpeg" class="image" alt="">
-                    <h2 class="title" id="p2">server IP thing 2
+                    <h2 class="title" id="p1"><span id="serverName">Nembus</span></h2>
+                    <h2 class="serverIP" id="p2">play.nembus.nl:28015
                         <button class="copy_button" onclick="copyToClipboard('#p2')">
                             <i class="fa-regular fa-copy"></i>   
                         </button>
                     </h2>
-                    <h2 class="count"> 67/100</h2>
-                    <div class="progress-grey">
-                        <div class="progress"></div>
-                    </div>
-                </div><div class="kaarten-3">
-                    <img src="images/background.jpeg" class="image" alt="">
-                    <h2 class="title" id="p3">server IP thing 3
-                        <button class="copy_button" onclick="copyToClipboard('#p3')">
-                            <i class="fa-regular fa-copy"></i>   
-                        </button>
-                    </h2>
-                    <h2 class="count"> 67/100</h2>
+                    <h2 class="count"><span id="activePlayers">25</span>/<span id="maxPlayers">100</span></h2>
                     <div class="progress-grey">
                         <div class="progress"></div>
                     </div>
                 </div>
-        
             </div>
         </div>
     </div>
