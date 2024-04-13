@@ -2,24 +2,32 @@ body {
     background-image: url('images/banner.png');
     overflow-y: hidden;
     overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-    z-index: 1;
-    transition: background-color 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .header-buttons {
-    display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
+.header-buttons {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
 .kaarten-1 {
     background: rgba(54, 54, 54, 0.5);
     border-radius: 16px;
@@ -27,7 +35,7 @@ header {
     backdrop-filter: blur(5.8px);
     -webkit-backdrop-filter: blur(5.8px);
     border-radius: 10px;
-    width: 300px;
+    max-width: 300px;
     position: relative;
     transition: transform 0.3s ease-out;
 }
@@ -92,7 +100,7 @@ header {
 
 .center {
     display: flex;
-    justify-content: center; /* horizontally center */
+    justify-content: center;
     align-items: center;
     height: 100Vh;
 }
@@ -159,7 +167,7 @@ header {
     border-radius: 4px;
     text-align-last: center;
     text-align: center;
-    font-size: 20px; /* Adjust font size for the text */
+    font-size: 20px;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: #ffffff;
@@ -171,6 +179,7 @@ header {
     left: 420px;
     position: absolute;
 }
+
 .cta {
     border: none;
     background: none;
@@ -208,3 +217,41 @@ header {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+@media screen and (max-width: 500px) {
+  .header {
+    width: 500px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cards {
+    display: grid;
+    position: relative;
+    right: 65px;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    }
+
+    .header-buttons {
+      position: relative;
+      text-align: center;
+      right: 50px;
+      top: 1px;
+    }
+
+    .topbar-eu {
+      position: absolute;
+      width: 250px;
+      top: 300px;
+      left: 180px;
+      transform: translateX(-50%);
+    }
+    
+    html, body {
+      max-width: 100%;
+      overflow: hidden;
+    }
+}
