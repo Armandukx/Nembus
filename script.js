@@ -1,3 +1,5 @@
+var changingIcon = false;
+
 async function fetchServerStats() {
   try {
       const response = await fetch('https://api.battlemetrics.com/servers/26957610');
@@ -21,15 +23,27 @@ function updateStats(data) {
   progress.style.width = progressPercentage + '%';
 }
 
+window.onload = function() {
+  fetchServerStats();
+  setInterval(fetchServerStats, 60000);
+};
+
 function copyToClipboard(element) {
+  if (changingIcon) return;
+  changingIcon = true;
   var $temp = $("<input>");
   $("body").append($temp);
   $temp.val($(element).text()).select();
   document.execCommand("copy");
   $temp.remove();
+  var $button = $(".copy_button");
+  $button.find("i").removeClass("fa-regular").addClass("fa-solid");
+  setTimeout(function() {
+      $button.find("i").removeClass("fa-solid").addClass("fa-regular");
+      changingIcon = false; // Reset the flag after changing back
+  }, 100);
 }
 
-window.onload = function() {
-  fetchServerStats();
-  setInterval(fetchServerStats, 60000);
-};
+function openInSameWindow(url) {
+  window.location.href = url;
+}

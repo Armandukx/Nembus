@@ -18,7 +18,7 @@
 <body>
     <header class="header">
         <div class="header-buttons">
-            <button class="cta" onclick="window.open('https://nembus.nl/')">
+            <button class="cta" onclick="openInSameWindow('https://nembus.nl/'); return false;"">
                 <span class="hover-underline-animation"> Home </span>
               </button>
             <button class="cta" onclick="window.open('https://nembus.nl/shop', '_blank')">
@@ -34,11 +34,14 @@
         <div class="center">
             <div class="cards">
                 <div class="kaarten-1">
-                    <img src="images/background.jpeg" class="image" alt="">
+                    <img src="images/banner.png" class="image" alt="">
                     <h2 class="title" id="p1"><span id="serverName">Nembus</span></h2>
                     <h2 class="serverIP" id="p2">play.nembus.nl:28015
                         <button class="copy_button" onclick="copyToClipboard('#p2')">
-                            <i class="fa-regular fa-copy"></i>   
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <button class="connect_button" onclick="openInSameWindow('steam://connect/play.nembus.nl:28015'); return false;">
+                            <i class="fa-solid fa-plug"></i>
                         </button>
                     </h2>
                     <h2 class="count"><span id="activePlayers">25</span>/<span id="maxPlayers">100</span></h2>

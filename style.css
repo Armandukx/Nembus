@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/banner.png');
+    background-image: url('images/background - blurred.png');
     overflow-y: hidden;
     overflow-x: hidden;
     background-repeat: no-repeat;
@@ -135,6 +135,17 @@ header {
     text-align: center;
     position: relative;
     cursor: pointer;
+}
+
+.connect_button {
+  background: none;
+  font-size: 25px;
+  border: none;
+  border-radius: 100px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
 }
 
 .progress-grey {
