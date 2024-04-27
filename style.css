@@ -1,10 +1,13 @@
 body {
-    background-image: url('images/background - blurred.png');
-    overflow-y: hidden;
-    overflow-x: hidden;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center top;
+  background-image: url('images/background - blurred.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 header {
@@ -14,46 +17,20 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  text-align: center;
   align-items: center;
   padding: 1rem 0;
   z-index: 1;
-  transition: background-color 0.3s ease;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .header-buttons {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
-.kaarten-1 {
-    background: rgba(54, 54, 54, 0.5);
-    border-radius: 16px;
-    box-shadow: 0px 0px 20px 1px #000000;
-    backdrop-filter: blur(5.8px);
-    -webkit-backdrop-filter: blur(5.8px);
-    border-radius: 10px;
-    max-width: 300px;
-    position: relative;
-    transition: transform 0.3s ease-out;
-}
-
-.kaarten-1:hover {
-    transform: scale(1.1);
-  }
-  .kaarten-2:hover {
-    transform: scale(1.1);
-  }
-  .kaarten-3:hover {
-    transform: scale(1.1);
-  }
-
-  .h2 {
-    color: #D9D9D9;
-  }
-
+.kaarten-1,
+.kaarten-2,
 .kaarten-3 {
     background: rgba(54, 54, 54, 0.5);
     border-radius: 16px;
@@ -66,23 +43,21 @@ header {
     transition: transform 0.3s ease-out;
 }
 
+.kaarten-1:hover,
+.kaarten-2:hover,
+.kaarten-3:hover {
+    transform: scale(1.1);
+}
+
+  .h2 {
+    color: #D9D9D9;
+  }
+
 .count {
     text-align: center;
     margin-top: -20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #ffffff;
-}
-
-.kaarten-2 {
-    background: rgba(54, 54, 54, 0.5);
-    border-radius: 16px;
-    box-shadow: 0px 0px 20px 1px #000000;
-    backdrop-filter: blur(5.8px);
-    -webkit-backdrop-filter: blur(5.8px);
-    width: 300px;
-    position: relative;
-    border-radius: 10px;
-    transition: transform 0.3s ease-out;    
 }
 
 .image {
@@ -91,13 +66,11 @@ header {
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: 1fr;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-    }
-
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 15px; /* Added padding for better spacing */
+}
 .center {
     display: flex;
     justify-content: center;
@@ -173,96 +146,68 @@ header {
 }
 
 .topbar-eu {
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 20px 1px #000000;
-    border-radius: 4px;
-    text-align-last: center;
-    text-align: center;
-    font-size: 20px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    color: #ffffff;
-    width: 1000px;
-    height: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 200px;
-    left: 420px;
-    position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px #000000;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  width: 90%;
+  max-width: 1000px;
+  height: 30px;
+  margin: 0 auto;
+  top: 150px;
+  position: relative;
 }
 
 .cta {
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-  
-  .cta span {
-    padding-bottom: 7px;
-    letter-spacing: 4px;
-    font-size: 14px;
-    padding-right: 15px;
-    text-transform: uppercase;
-  }
-  
-  .hover-underline-animation {
-    position: relative;
-    color: rgb(255, 255, 255);
-    padding-bottom: 20px;
-  }
-  
-  .hover-underline-animation:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #ffffff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .cta:hover .hover-underline-animation:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+  border: none;
+  background: none;
+  cursor: pointer;
+}
 
-@media screen and (max-width: 500px) {
-  .header {
-    width: 500px;
-    justify-content: center;
-    text-align: center;
-  }
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
 
-  .cards {
-    display: grid;
-    position: relative;
-    right: 65px;
-    grid-template-columns: repeat(1, auto);
-    grid-template-rows: 1fr;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-    }
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
 
-    .header-buttons {
-      position: relative;
-      text-align: center;
-      right: 50px;
-      top: 1px;
-    }
+.cta:hover svg {
+  transform: translateX(0);
+}
 
-    .topbar-eu {
-      position: absolute;
-      width: 250px;
-      top: 300px;
-      left: 180px;
-      transform: translateX(-50%);
-    }
-    
-    html, body {
-      max-width: 100%;
-      overflow: hidden;
-    }
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: rgb(255, 255, 255);
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c7bdbd;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
