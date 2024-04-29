@@ -1,5 +1,5 @@
 body {
-  background-image: url('images/background - blurred.png');
+  background-image: url('images/background-blurred.avif');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
@@ -69,7 +69,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 15px;
-  padding: 15px; /* Added padding for better spacing */
+  padding: 15px;
 }
 .center {
     display: flex;
